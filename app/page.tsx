@@ -322,7 +322,7 @@ export default function HomePage() {
           <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm">
             <li>Ecology Lab, Department of Botany, University of Dhaka</li>
             <li>Microsystems & Nanoengineering Lab, Department of Electrical and Electronics Engineering, University of Dhaka</li>
-            <li>Department of Geology, University of Dhaka</li>
+            <li>Geoinformatics Lab, Department of Geology, University of Dhaka</li>
             <li>GIS and Remote Sensing Lab, Gazipur Agricultural University</li>
           </ul>
         </section>
