@@ -290,28 +290,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Past Experience Section */}
-
-        <section id="past-experience" className="scroll-mt-20 mb-16">
-          <div className="flex items-center mb-6">
-            <span className="text-orange-500 mr-2">🔬</span>
-            <h2 className="text-2xl font-semibold text-gray-900">Past Research Experience</h2>
-          </div>
-          <ul className="list-disc pl-5 space-y-3 text-sm text-gray-700">
-            <li>
-              <span className="italic">2022,</span> Research Assistant, University of Dhaka — <span className="font-medium">Deep Learning to Detect Diabetic Macular Edema (DME) of Eye (DeepEye),</span> UGC Bangladesh.
-            </li>
-            <li>
-              <span className="italic">2021–2022,</span> Research Assistant, University of Dhaka — <span className="font-medium">AI for Automated Brain Hemorrhage Detection from CT Scans (AIBrainS),</span> CRG.
-            </li>
-            <li>
-              <span className="italic">2021,</span> Visiting Research Assistant, GIS and Remote Sensing Lab, Gazipur Agricultural University.
-            </li>
-            <li>
-              <span className="italic">2020,</span> Research Assistant, University of Dhaka — <span className="font-medium">Deep Learning in Pneumonia Detection from X-ray (DeepMoniaX),</span> UGC Bangladesh.
-            </li>
-          </ul>
-        </section>
 
         {/* Collaborations Section */}
         <section id="collaborations" className="scroll-mt-20 mb-16">
@@ -327,7 +305,6 @@ export default function HomePage() {
           </ul>
         </section>
 
-        
 
         
       </div>
