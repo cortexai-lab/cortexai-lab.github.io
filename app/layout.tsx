@@ -1,27 +1,20 @@
-import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
-import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
-import "./globals.css"
+import "@/styles/globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import { LayoutWrapper } from "@/components/layout-wrapper" // This line is correct, the error is likely in layout-wrapper.tsx
 
 export const metadata: Metadata = {
   title: "Cortex AI Lab",
-  description: "Research Innovate and Explore ",
-  generator: "Syed Nazmus Sakib",
+  description: "AI · Healthcare · Bio-inspired Robotics",
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} bg-white text-gray-900`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <LayoutWrapper>{children}</LayoutWrapper>
+        </ThemeProvider>
       </body>
     </html>
   )
