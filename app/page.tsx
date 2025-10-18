@@ -269,15 +269,17 @@ export default function HomePage() {
 
         {/* Principal Investigator */}
         <div className="mb-10 md:mb-12">
-          <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-4 md:mb-6 text-center">Principal Investigator</h3>
+          <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-4 md:mb-6 text-center">Lab Director and Principal Investigator</h3>
           <div className="flex justify-center">
             <div className="text-center">
-              <div className="w-40 h-40 md:w-48 md:h-48 mx-auto mb-3 md:mb-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg overflow-hidden border-2 border-blue-200">
-                <div className="w-full h-full flex items-center justify-center text-gray-400">
-                  <svg className="w-20 h-20 md:w-24 md:h-24" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                  </svg>
-                </div>
+              <div className="w-40 h-40 md:w-48 md:h-48 mx-auto mb-3 md:mb-4 bg-gray-200 rounded-lg overflow-hidden border-2 border-blue-200 shadow-sm">
+                <Image
+                  src=".\\assets\\shifat-arman.png" 
+                  alt="Shifat E. Arman"
+                  width={192} // Corresponds to w-48
+                  height={192} // Corresponds to h-48
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h4 className="text-base md:text-lg font-semibold text-gray-900">Shifat E Arman</h4>
               <p className="text-sm text-gray-600">Assistant Professor</p>
@@ -288,29 +290,88 @@ export default function HomePage() {
         </div>
 
         {/* Research Assistants */}
+        {/* Research Assistants */}
+        {/* Research Assistants */}
         <div>
           <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-4 md:mb-6 text-center">Research Assistants</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
             {[
-              { name: "Research Assistant 1", role: "Machine Learning" },
-              { name: "Research Assistant 2", role: "Computer Vision" },
-              { name: "Research Assistant 3", role: "Robotics" },
-              { name: "Research Assistant 4", role: "Bio-inspired Systems" },
-              { name: "Research Assistant 5", role: "Deep Learning" },
-              { name: "Research Assistant 6", role: "Medical Imaging" },
-              { name: "Research Assistant 7", role: "Agricultural AI" },
-              { name: "Research Assistant 8", role: "3D Vision" }
+              { 
+                name: "Jul Jalal Al-Mamur Sayor", 
+                level: "MSc Student",
+                interest: "Computer Vision",
+                // imageSrc: "/team/assistant1.jpg" // This person has an image
+              },
+              { 
+                name: "Tapodhir Karmakar Taton", 
+                level: "MSc Student",
+                interest: "Computer Vision",
+                // imageSrc: "/team/assistant2.jpg" // This person has an image
+              },
+              { 
+                name: "Syed Nazmus Sakib", 
+                level: "BSc Student",
+                interest: "Computer Vision",
+                // imageSrc is missing, so the avatar will be shown
+              },
+              { 
+                name: "Samudra Jit Saha", 
+                level: "BSc Student",
+                interest: "Bio-inspired Robotics",
+                // imageSrc: "/team/assistant4.jpg" // This person has an image
+              },
+              { 
+                name: "Md Tashrif Uzzaman", 
+                level: "BSc Student",
+                interest: "Computer Vision",
+                // imageSrc is missing, so the avatar will be shown
+              },
+              { 
+                name: "M.M Mahabub Morshed Prottoy", 
+                level: "BSc Student",
+                interest: "Computer Vision",
+                // imageSrc: "/team/assistant6.jpg" // This person has an image
+              },
+              { 
+                name: "MD Abid Chowdhury", 
+                level: "BSc Student",
+                interest: "Robotics",
+                // imageSrc: "/team/assistant6.jpg" // This person has an image
+              },
+              { 
+                name: "Nafiul Haque", 
+                level: "BSc Student",
+                interest: "Robotics",
+                // imageSrc: "/team/assistant6.jpg" // This person has an image
+              },
             ].map((ra, index) => (
               <div key={index} className="text-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-2 md:mb-3 bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
-                  <div className="w-full h-full flex items-center justify-center text-gray-400">
-                    <svg className="w-12 h-12 md:w-16 md:h-16" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                {/* Circular Image Container */}
+                <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-3 bg-gray-200 rounded-full overflow-hidden border-2 border-gray-300">
+                  {ra.imageSrc ? (
+                    // If imageSrc exists, render the Image component
+                    <Image
+                      src={ra.imageSrc}
+                      alt={ra.name}
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    // Otherwise, render the placeholder SVG avatar
+                    <div className="w-full h-full flex items-center justify-center text-gray-500">
+                      <svg className="w-12 h-12 md:w-16 md:h-16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  )}
                 </div>
-                <h4 className="text-xs md:text-sm font-medium text-gray-900">{ra.name}</h4>
-                <p className="text-xs text-gray-600">{ra.role}</p>
+                
+                {/* Text Content */}
+                <h4 className="text-sm md:text-base font-semibold text-gray-900">{ra.name}</h4>
+                <p className="text-xs md:text-sm text-blue-600 font-medium">{ra.level}</p>
+                <p className="text-xs text-gray-500 mt-1">{ra.interest}</p>
               </div>
             ))}
           </div>
