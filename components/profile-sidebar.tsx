@@ -25,17 +25,15 @@ export function ProfileSidebar() {
         {/* Name and Title */}
         <div>
           <h1 className="text-xl font-semibold text-gray-900">
-            Shifat E. Arman
+            Cortex AI Lab
           </h1>
           <p className="text-gray-600 text-base">
-            Assistant Professor • University of Dhaka
           </p>
         </div>
 
         {/* Brief Bio */}
         <div className="text-sm text-gray-700 leading-6">
           <p>AI in Healthcare | Foundation Models | Biomimetic Robotics</p>
-          <p>Founding Director of CORTEX AI Lab</p>
         </div>
 
         {/* Location */}
@@ -45,8 +43,8 @@ export function ProfileSidebar() {
         </div>
 
         {/* Contact Links - now a left-aligned vertical list */}
-        <div className="flex flex-col space-y-2 pt-2 border-t border-gray-100">
-          <Link href="mailto:shifatearman@du.ac.bd" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
+        {/* <div className="flex flex-col space-y-2 pt-2 border-t border-gray-100">
+          {/* <Link href="mailto:shifatearman@du.ac.bd" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
             <Mail className="w-4 h-4 mr-3" />
             <span>Email</span>
           </Link>
@@ -55,15 +53,15 @@ export function ProfileSidebar() {
             <span>LinkedIn</span>
           </Link>
           {/* ADDED GITHUB AND SCHOLAR */}
-          <Link href="#" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
+          {/* <Link href="#" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
             <Github className="w-4 h-4 mr-3" />
             <span>GitHub</span>
           </Link>
           <Link href="#" target="_blank" rel="noopener noreferrer" className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors">
             <GraduationCap className="w-4 h-4 mr-3" />
             <span>Google Scholar</span>
-          </Link>
-        </div>
+          </Link> */}
+
       </div>
     </aside>
   )

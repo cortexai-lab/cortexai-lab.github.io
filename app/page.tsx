@@ -6,22 +6,39 @@ export default function HomePage() {
   return (
     <LayoutWrapper>
       <div className="max-w-6xl">
-        {/* About Section */}
-        <section id="about" className="scroll-mt-20 mb-16">
-          <div className="prose prose-gray max-w-none">
-            <p className="text-gray-700 leading-relaxed mb-4">
-              I am an Assistant Professor in the Department of Robotics and Mechatronics Engineering at the University of Dhaka and the founder and director of the Cortex AI Lab, where we focus on AI in healthcare and bioinspired robotics. My work addresses challenges in medical image and video analysis, with particular emphasis on spatiotemporal modeling, multimodal learning, and self-supervised methods for diagnostic and predictive tasks. The goal is to develop AI systems that clinicians can trust, systems that are interpretable, efficient, and capable of transforming diagnostics and decision-making.
+        {/* Hero Section - Simple Layout */}
+        <section className="mb-16">
+          <div className="flex flex-col md:flex-row gap-8 items-start">
+            {/* Left side - Text */}
+            <div className="flex-1">
+              <div className="inline-block bg-blue-600 text-white px-4 py-1.5 rounded-full text-sm font-medium mb-4">
+                Welcome to Cortex AI Lab
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                Innovating at the Intersection of AI, Healthcare, and Bio-Inspired Robotics
+              </h1>
+              <div className="prose prose-lg max-w-none">
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Located within the Department of Robotics and Mechatronics Engineering at the University of Dhaka, <strong>Cortex AI Lab</strong> stands at the cutting edge of applied artificial intelligence in <strong>Biomedical AI</strong>, <strong>Multi-Modal Learning</strong>, <strong>Self-Supervised Learning</strong>, <strong>3D Scene Understanding</strong>, and <strong>bio-inspired robotics</strong>. We are dedicated to transforming healthcare through innovative AI solutions and exploring robotics inspired by nature.
+                </p>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Our lab proudly collaborates with the <strong>National Institute of Cardiovascular Diseases</strong>, <strong>Combined Military Hospital</strong>, and multiple departments within the University of Dhaka. These partnerships enhance our research and broaden our impact.
+                </p>
+                <p className="text-blue-700 font-medium text-lg">
+                  Join us as we innovate for a healthier and smarter future.
+                </p>
+              </div>
+            </div>
 
-            </p>
-
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Alongside healthcare, I lead projects that extend AI into bioinspired robotics, agriculture, and nanophotonics, reflecting my belief that important advances often emerge at the intersection of disciplines. I maintain ongoing collaborations with both academic groups and industry partners, which broaden the scope of my work and support translation of research into real-world applications.
-
-            </p>
-
-            <p className="text-gray-700 leading-relaxed mb-6">
-            I completed both my BSc and MSc in Robotics and Mechatronics Engineering at the University of Dhaka. My work has been recognized with the Dhaka University Research Excellence Award (2025), the Provost Award (2025), and the IQAC Special Merit Award (2024). I have secured several competitive research grants as Principal Investigator and Co-Investigator, supporting projects in healthcare AI, robotics, and interdisciplinary applications.
-            </p>
+            {/* Right side - Logo */}
+            <div className="md:flex-shrink-0">
+              <div className="w-64 h-64 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center border-2 border-blue-200">
+                <div className="text-center">
+                  <div className="text-6xl font-bold text-blue-600 mb-2">CORTEX</div>
+                  <div className="text-sm text-gray-600 font-medium">AI LAB</div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -35,11 +52,11 @@ export default function HomePage() {
           <div className="space-y-2 text-sm">
             <div className="flex">
               <span className="text-gray-500 w-20 flex-shrink-0">2025.06</span>
-              <span className="text-gray-700">Promoted to Assistant Professor at the Department of Robotics & Mechatronics Engineering, University of Dhaka</span>
+              <span className="text-gray-700">Promoted to Assistant Professor at the Department of Robotics & Mechatronics Engineering, University of Dhaka</span>
             </div>
             <div className="flex">
               <span className="text-gray-500 w-20 flex-shrink-0">2025</span>
-              <span className="text-gray-700">Received the Provost Award for standing first in MSc with a CGPA of 3.98</span>
+              <span className="text-gray-700">Received the Provost Award for standing first in MSc with a CGPA of 3.98</span>
             </div>
             <div className="flex">
               <span className="text-gray-500 w-20 flex-shrink-0">2025</span>
@@ -266,7 +283,6 @@ export default function HomePage() {
         </section>
 
         {/* Research Grants Section */}
-
         <section id="fundings" className="scroll-mt-20 mb-16">
           <div className="flex items-center mb-6">
             <span className="text-orange-500 mr-2">💰</span>
@@ -283,13 +299,12 @@ export default function HomePage() {
                   <span className="italic">2024,</span> University Grants Commission of Bangladesh Grant (Co-Principal Investigator): <span className="font-medium">Development of a Protocol for Rapid Assessment of Plants Responses to Climate-Induced Stress Using an AI-based Framework.</span>
                 </li>
                 <li>
-                  <span className="italic">2023,</span> UGC Grant in collaboration with University of Dhaka (Co-Principal Investigator): <span className="font-medium">SmartPDE: Deep Learning Based Plant Disease Epidemiology and Forecasting.</span>
+                  <span className="italic">2023,</span> UGC Grant in collaboration with University of Dhaka (Co-Principal Investigator): <span className="font-medium">SmartPDE: Deep Learning Based Plant Disease Epidemiology and Forecasting.</span>
                 </li>
               </ul>
             </div>
           </div>
         </section>
-
 
         {/* Collaborations Section */}
         <section id="collaborations" className="scroll-mt-20 mb-16">
@@ -305,8 +320,106 @@ export default function HomePage() {
           </ul>
         </section>
 
+        {/* People Section */}
+        <section id="people" className="scroll-mt-20 mb-16">
+          <div className="flex items-center mb-6">
+            <span className="text-orange-500 mr-2">👥</span>
+            <h2 className="text-2xl font-semibold text-gray-900">People</h2>
+          </div>
 
-        
+          {/* Principal Investigator */}
+          <div className="mb-12">
+            <h3 className="text-xl font-medium text-gray-800 mb-6 text-center">Principal Investigator</h3>
+            <div className="flex justify-center">
+              <div className="text-center">
+                <div className="w-48 h-48 mx-auto mb-4 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg overflow-hidden border-2 border-blue-200">
+                  <div className="w-full h-full flex items-center justify-center text-gray-400">
+                    <svg className="w-24 h-24" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900">Shifat E Arman</h4>
+                <p className="text-sm text-gray-600">Assistant Professor</p>
+                <p className="text-xs text-gray-500 mt-1">Department of Robotics & Mechatronics Engineering</p>
+                <p className="text-xs text-gray-500">University of Dhaka</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Research Assistants */}
+          <div>
+            <h3 className="text-xl font-medium text-gray-800 mb-6 text-center">Research Assistants</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { name: "Research Assistant 1", role: "Machine Learning" },
+                { name: "Research Assistant 2", role: "Computer Vision" },
+                { name: "Research Assistant 3", role: "Robotics" },
+                { name: "Research Assistant 4", role: "Bio-inspired Systems" },
+                { name: "Research Assistant 5", role: "Deep Learning" },
+                { name: "Research Assistant 6", role: "Medical Imaging" },
+                { name: "Research Assistant 7", role: "Agricultural AI" },
+                { name: "Research Assistant 8", role: "3D Vision" }
+              ].map((ra, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-32 h-32 mx-auto mb-3 bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
+                    <div className="w-full h-full flex items-center justify-center text-gray-400">
+                      <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h4 className="text-sm font-medium text-gray-900">{ra.name}</h4>
+                  <p className="text-xs text-gray-600">{ra.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Join Our Lab Section */}
+        <section id="join" className="scroll-mt-20 mb-16">
+          <div className="flex items-center mb-6">
+            <span className="text-orange-500 mr-2">🚀</span>
+            <h2 className="text-2xl font-semibold text-gray-900">Join Our Lab</h2>
+          </div>
+          <div className="text-sm text-gray-700 space-y-3">
+            <p>
+              We are always looking for motivated students and researchers interested in AI, healthcare, and bio-inspired robotics. If you're passionate about pushing the boundaries of technology and making a real-world impact, we'd love to hear from you.
+            </p>
+            <p className="font-medium">
+              Opportunities available for:
+            </p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Undergraduate research assistants</li>
+              <li>MSc students (thesis and research)</li>
+              <li>Visiting researchers and collaborators</li>
+            </ul>
+            <p>
+              Please reach out via the contact section below with your CV and research interests.
+            </p>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="scroll-mt-20 mb-16">
+          <div className="flex items-center mb-6">
+            <span className="text-orange-500 mr-2">📧</span>
+            <h2 className="text-2xl font-semibold text-gray-900">Contact</h2>
+          </div>
+          <div className="text-sm text-gray-700 space-y-3">
+            <div>
+              <p className="font-medium text-gray-900">Cortex AI Lab</p>
+              <p>Department of Robotics and Mechatronics Engineering</p>
+              <p>University of Dhaka</p>
+              <p>Dhaka, Bangladesh</p>
+            </div>
+            <div>
+              <p><span className="font-medium">Email:</span> cortexailab@du.ac.bd</p>
+              <p><span className="font-medium">PI Email:</span> shifat.arman@du.ac.bd</p>
+            </div>
+          </div>
+        </section>
       </div>
     </LayoutWrapper>
   )

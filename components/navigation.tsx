@@ -11,9 +11,7 @@ const navigationItems = [
   { name: "News", href: "#news" },
   { name: "Publications", href: "#publications" },
   { name: "Fundings", href: "#fundings" },
-  { name: "Collaborations", href: "#collaborations" },
-  { name: "Education", href: "#education" },
-  { name: "Teaching", href: "#teaching" },
+  { name: "Collaborations", href: "#collaborations" }
 ]
 
 export function Navigation({
