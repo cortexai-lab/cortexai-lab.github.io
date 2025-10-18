@@ -53,23 +53,19 @@ export default function HomePage() {
         <div className="space-y-2 md:space-y-3 text-xs md:text-sm">
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-0">
             <span className="text-gray-500 sm:w-20 flex-shrink-0 font-medium sm:font-normal">2025</span>
-            <span className="text-gray-700">Received the Dhaka University Research Excellence Award for our contributions to academic research.</span>
+            <span className="text-gray-700">Received the Dhaka University <span className="font-medium" >Research Excellence Award</span> for our contributions to academic research.</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-0">
             <span className="text-gray-500 sm:w-20 flex-shrink-0 font-medium sm:font-normal">2024</span>
-            <span className="text-gray-700">Awarded the ICT Division's prestigious <span className="font-medium">Innovation Fund</span> for our research on smart biomimetic robots.</span>
+            <span className="text-gray-700">Awarded the ICT Division's <span className="font-medium">Innovation Fund</span> for our research on smart biomimetic robots.</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-0">
             <span className="text-gray-500 sm:w-20 flex-shrink-0 font-medium sm:font-normal">2024</span>
-            <span className="text-gray-700">Our project, <span className="font-medium">"TurtleBot"</span>, an underwater exploration robot inspired by sea turtles, became the champion at the National Project Showcase.</span>
+            <span className="text-gray-700">Our project, <span className="font-medium">"TurtleBot"</span>, an underwater exploration robot inspired by sea turtles, became the champion at the Robotronics Fest 2025</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-1 sm:gap-0">
             <span className="text-gray-500 sm:w-20 flex-shrink-0 font-medium sm:font-normal">2023</span>
-            <span className="text-gray-700">Secured the <span className="font-medium">UGC Research Fund</span> to develop an AI framework for assessing climate-induced stress in plants.</span>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-1 sm:gap-0">
-            <span className="text-gray-500 sm:w-20 flex-shrink-0 font-medium sm:font-normal">2023</span>
-            <span className="text-gray-700">Awarded <span className="font-medium">"Best Research Paper"</span> at the International Conference on Robotics and Automation.</span>
+            <span className="text-gray-700">Secured the <span className="font-medium">UGC Research Grant</span> to develop an AI framework for assessing climate-induced stress in plants.</span>
           </div>
         </div>
       </section>
@@ -84,6 +80,34 @@ export default function HomePage() {
         <div className="space-y-6 md:space-y-8">
           {/* Publication cards - make them more mobile friendly */}
           {[
+            {
+              image: ".\\assets\\nana_particle.png",
+              badge: "Nanoscale Advances",
+              badgeColor: "bg-cyan-700",
+              year: "2024",
+              title: "Leveraging Generative Neural Networks for Accurate, Diverse, and Robust Nanoparticle Design",
+              authors: "Rahman T, Tahmid A, Arman SE, et al.",
+              link: "https://pubs.rsc.org/en/content/articlehtml/2025/na/d4na00859f",
+              impact: "4.6",
+              quartile: "Q1",
+              highlights: [
+                "Generative frameworks to explore robust nanoparticle configurations",
+                "Balances accuracy, diversity, and stability in design space"
+              ]
+            },
+                        {
+              image: ".\\assets\\CovidXception.png",
+              badge: "SN Computer Science",
+              badgeColor: "bg-slate-700",
+              year: "2022",
+              title: "COVIDXception-Net: A Bayesian Optimization-Based Deep Learning Approach to Diagnose COVID-19 from X-Ray Images",
+              authors: "Arman SE, Rahman S, Deowan SA",
+              link: "https://link.springer.com/article/10.1007/s42979-021-00980-3",
+              highlights: [
+                "Xception-based transfer learning tuned with Bayesian optimization",
+                "Improves sensitivity at clinically relevant thresholds"
+              ]
+            },
             {
               image: ".\\assets\\banasqueezenet.jpg",
               badge: "Smart Agricultural Tech",
@@ -127,21 +151,7 @@ export default function HomePage() {
                 "Dual-mode guidance for proactive and reactive crop care"
               ]
             },
-            {
-              image: ".\\assets\\nana_particle.png",
-              badge: "Nanoscale Advances",
-              badgeColor: "bg-cyan-700",
-              year: "2024",
-              title: "Leveraging Generative Neural Networks for Accurate, Diverse, and Robust Nanoparticle Design",
-              authors: "Rahman T, Tahmid A, Arman SE, et al.",
-              link: "https://pubs.rsc.org/en/content/articlehtml/2025/na/d4na00859f",
-              impact: "4.6",
-              quartile: "Q1",
-              highlights: [
-                "Generative frameworks to explore robust nanoparticle configurations",
-                "Balances accuracy, diversity, and stability in design space"
-              ]
-            },
+
             {
               image: ".\\assets\\mango_leaf.jpg",
               badge: "Heliyon",
@@ -172,19 +182,7 @@ export default function HomePage() {
                 "Improved operating points under clinical sensitivity constraints"
               ]
             },
-            {
-              image: ".\\assets\\CovidXception.png",
-              badge: "SN Computer Science",
-              badgeColor: "bg-slate-700",
-              year: "2022",
-              title: "COVIDXception-Net: A Bayesian Optimization-Based Deep Learning Approach to Diagnose COVID-19 from X-Ray Images",
-              authors: "Arman SE, Rahman S, Deowan SA",
-              link: "https://link.springer.com/article/10.1007/s42979-021-00980-3",
-              highlights: [
-                "Xception-based transfer learning tuned with Bayesian optimization",
-                "Improves sensitivity at clinically relevant thresholds"
-              ]
-            }
+
           ].map((pub, index) => (
             <div key={index} className="flex flex-col gap-4 p-4 md:p-6 bg-gray-50 rounded-lg">
               <div className="flex flex-col sm:flex-row gap-4">
@@ -255,8 +253,8 @@ export default function HomePage() {
           <li>Microsystems & Nanoengineering Lab, Department of Electrical and Electronics Engineering, University of Dhaka</li>
           <li>Geoinformatics Lab, Department of Geology, University of Dhaka</li>
           <li>GIS and Remote Sensing Lab, Gazipur Agricultural University</li>
-          <li>National Institute of Cardiovascular Diseases, Combined Military Hospital</li>
-          <li>VLM-Run</li>
+          <li>National Institute of Cardiovascular Diseases</li>
+          <li>Combined Military Hospital (CMH)</li> 
         </ul>
       </section>
 
@@ -269,7 +267,7 @@ export default function HomePage() {
 
         {/* Principal Investigator */}
         <div className="mb-10 md:mb-12">
-          <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-4 md:mb-6 text-center">Lab Director and Principal Investigator</h3>
+          <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-4 md:mb-6 text-center"> Founding Director & Principal Investigator </h3>
           <div className="flex justify-center">
             <div className="text-center">
               <div className="w-40 h-40 md:w-48 md:h-48 mx-auto mb-3 md:mb-4 bg-gray-200 rounded-lg overflow-hidden border-2 border-blue-200 shadow-sm">
@@ -289,8 +287,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Research Assistants */}
-        {/* Research Assistants */}
         {/* Research Assistants */}
         <div>
           <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-4 md:mb-6 text-center">Research Assistants</h3>
@@ -386,14 +382,13 @@ export default function HomePage() {
         </div>
         <div className="text-xs md:text-sm text-gray-700 space-y-3">
           <p>
-            We are always looking for motivated students and researchers interested in AI, healthcare, and bio-inspired robotics. If you're passionate about pushing the boundaries of technology and making a real-world impact, we'd love to hear from you.
+            If You are Interested in joining the Cortex AI Lab, we welcome motivated individuals who are passionate about research and innovation in the fields of AI, robotics, and biomedical applications.
           </p>
           <p className="font-medium">
             Opportunities available for:
           </p>
           <ul className="list-disc pl-4 md:pl-5 space-y-1">
-            <li>Undergraduate research assistants</li>
-            <li>MSc students (thesis and research)</li>
+            <li>Undergrad and PostGrad Students</li>
             <li>Visiting researchers and collaborators</li>
           </ul>
           <p>
@@ -416,8 +411,8 @@ export default function HomePage() {
             <p>Dhaka, Bangladesh</p>
           </div>
           <div>
-            <p><span className="font-medium">Email:</span> cortexailab@du.ac.bd</p>
-            <p><span className="font-medium">PI Email:</span> shifat.arman@du.ac.bd</p>
+            <p><span className="font-medium">Email:</span> cortexai-lab@coretxai.du.ac.bd</p>
+            <p><span className="font-medium">PI Email:</span> shifatearman@du.ac.bd</p>
           </div>
         </div>
       </section>
