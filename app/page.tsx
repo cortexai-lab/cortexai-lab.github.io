@@ -287,8 +287,122 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Research Assistants */}
-        <div>
+
+
+{/* Academic Collaborators */}
+        <div className="mt-12 md:mt-16 mb-10 md:mb-12">
+          <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-4 md:mb-6 text-center">Academic Collaborators</h3>
+          
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            {[
+              { 
+                name: "Dr. Mohammad Zabed Hossain", 
+                title: "Professor",
+                department: "Department of Botany",
+                institution: "University of Dhaka",
+                imageSrc: "/team/zabed_sir.jpg"
+              },
+              { 
+                name: "Dr. Md. Ashraful Islam", 
+                title: "Associate Professor",
+                department: "Dept. of Geology",
+                institution: "University of Dhaka",
+                imageSrc: "/team/himel_sir.jpg"
+              },
+              { 
+                name: "Dr. Ahmed Hassan", 
+                title: "Assistant Professor",
+                department: "Department of Electricak and Electronic Engineering",
+                institution: "University of Dhaka",
+                // imageSrc: "/team/collaborator3.jpg"
+              },
+            ].map((collaborator, index) => (
+              <div key={index} className="text-center">
+                <div className="w-40 h-40 md:w-48 md:h-48 mx-auto mb-3 md:mb-4 bg-gray-200 rounded-lg overflow-hidden border-2 border-blue-200 shadow-sm">
+                  {collaborator.imageSrc ? (
+                    <Image
+                      src={collaborator.imageSrc}
+                      alt={collaborator.name}
+                      width={192}
+                      height={192}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-gray-500">
+                      <svg className="w-16 h-16 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+                
+                <h4 className="text-sm md:text-base font-semibold text-gray-900">{collaborator.name}</h4>
+                <p className="text-xs md:text-sm text-gray-600">{collaborator.title}</p>
+                <p className="text-xs text-gray-500 mt-1">{collaborator.department}</p>
+                <p className="text-xs text-gray-500">{collaborator.institution}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+{/* Industrial Collaborators */}
+        <div className="mt-12 md:mt-16 mb-10 md:mb-12">
+          <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-4 md:mb-6 text-center">Industrial Collaborators</h3>
+          
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            {[
+              { 
+                name: "Dr. XYZ", 
+                title: "Senior Researcher",
+                department: "Cardiovascular Research Division",
+                institution: "National Institute of Cardiovascular Diseases",
+                // imageSrc: "/team/collaborator3.jpg"
+              },
+              { 
+                name: "Col. Dr. Rashid Khan", 
+                title: "Head of Medical Imaging",
+                department: "Radiology Department",
+                institution: "Combined Military Hospital",
+                // imageSrc: "/team/collaborator4.jpg"
+              },
+              { 
+                name: "ABC", 
+                title: "VLM Run",
+                department: "",
+                institution: "",
+                // imageSrc: "/team/collaborator5.jpg"
+              },
+            ].map((collaborator, index) => (
+              <div key={index} className="text-center">
+                <div className="w-40 h-40 md:w-48 md:h-48 mx-auto mb-3 md:mb-4 bg-gray-200 rounded-lg overflow-hidden border-2 border-blue-200 shadow-sm">
+                  {collaborator.imageSrc ? (
+                    <Image
+                      src={collaborator.imageSrc}
+                      alt={collaborator.name}
+                      width={192}
+                      height={192}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-gray-500">
+                      <svg className="w-16 h-16 md:w-20 md:h-20" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+                
+                <h4 className="text-sm md:text-base font-semibold text-gray-900">{collaborator.name}</h4>
+                <p className="text-xs md:text-sm text-gray-600">{collaborator.title}</p>
+                <p className="text-xs text-gray-500 mt-1">{collaborator.department}</p>
+                <p className="text-xs text-gray-500">{collaborator.institution}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+{/* Research Assistants */}
+        <div className="mb-10 md:mb-12">
           <h3 className="text-lg md:text-xl font-medium text-gray-800 mb-4 md:mb-6 text-center">Research Assistants</h3>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
@@ -297,24 +411,26 @@ export default function HomePage() {
                 name: "Jul Jalal Al-Mamur Sayor", 
                 level: "MSc Student",
                 interest: "Computer Vision",
-                // imageSrc: "/team/assistant1.jpg" // This person has an image
+                imageSrc: "/team/jalal.png" // This person has an image
               },
               { 
                 name: "Tapodhir Karmakar Taton", 
                 level: "MSc Student",
                 interest: "Computer Vision",
-                // imageSrc: "/team/assistant2.jpg" // This person has an image
+                imageSrc: "/team/taton.jpg" // This person has an image
               },
               { 
                 name: "Syed Nazmus Sakib", 
                 level: "BSc Student",
                 interest: "Computer Vision",
+                imageSrc: "/team/sakib.jpg"
                 // imageSrc is missing, so the avatar will be shown
               },
               { 
                 name: "Samudra Jit Saha", 
                 level: "BSc Student",
                 interest: "Bio-inspired Robotics",
+                imageSrc: "/team/sam.jpg"
                 // imageSrc: "/team/assistant4.jpg" // This person has an image
               },
               { 
@@ -372,6 +488,8 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+
+        
       </section>
 
       {/* Join Our Lab Section */}
